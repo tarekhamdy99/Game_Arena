@@ -1,0 +1,615 @@
+/*****? Global Styles *****/
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+body::selection {
+  background-color: var(--yel-color);
+  color: var(--main-background-color);
+}
+
+:root {
+  --yel-color: #cbfe1c;
+  --main-background-color: #0b0e13;
+  --animation-speed: 40s;
+}
+
+/* Own Global Custom Classes*/
+.text-yel-color {
+  color: var(--yel-color);
+}
+.bg-yel-color {
+  background-color: var(--yel-color);
+}
+.bg-black-section {
+  background-color: var(--main-background-color);
+}
+
+.p-title {
+  word-spacing: 5px;
+  letter-spacing: 3px;
+}
+
+.font-day {
+  font-family: "Days One", sans-serif;
+}
+
+.trans-2 {
+  transition: all 0.2s ease;
+}
+.trans-4 {
+  transition: all 0.4s ease;
+}
+.trans-5 {
+  transition: all 0.5s ease;
+}
+
+.trans-7 {
+  transition: all 0.7s ease;
+}
+
+.border-yel {
+  border-color: var(--yel-color);
+}
+
+/* Golbal shapes Of Title*/
+.container .title p::before {
+  content: "";
+  background-image: linear-gradient(to left, var(--yel-color) 70%, #000);
+  width: 5%;
+  height: 3px;
+  position: absolute;
+  left: 38%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container .title p::after {
+  content: "";
+  background-image: linear-gradient(to right, var(--yel-color) 70%, #000);
+  width: 5%;
+  height: 3px;
+  position: absolute;
+  right: 38%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*****? End Global Styles *****/
+
+/*****? NavBar *****/
+
+nav .navbar-brand:focus,
+nav .navbar-brand:hover {
+  color: var(--yel-color);
+  font-weight: bold;
+}
+
+nav .container .collapse ul li a:hover {
+  color: var(--yel-color) !important;
+}
+
+nav .container .left-side .nav-icon:hover i,
+nav .container .left-side .nav-icon:hover span {
+  color: var(--yel-color) !important;
+  cursor: pointer;
+}
+
+nav .container .left-side button:hover {
+  background-color: #c9fe1cc6;
+}
+
+nav .container .left-side button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg, #0000, rgba(255, 255, 255, 0.627), #0000);
+  transition: left 0.7s;
+}
+
+nav .container .left-side button:hover::before {
+  left: 125%;
+}
+
+nav .nav-link.active {
+  color: var(--yel-color) !important;
+  font-weight: bold !important;
+}
+
+/*****? End NavBar *****/
+
+/*****? Header *****/
+
+header {
+  background-image:
+    linear-gradient(#000000e0, #000000e0),
+    url(../Media/Images/imgi_77_hero-bg-H6PoyNYD.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 150px;
+}
+
+header .container .hero-info {
+  width: 45%;
+}
+header .container .hero-info .hero-actions a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, #0000, rgba(255, 255, 255, 0.627), #0000);
+  transition: left 0.7s;
+}
+
+header .container .hero-info .hero-actions a:hover:before {
+  left: 125%;
+}
+
+header .container .hero-info .hero-actions .start {
+  background-color: var(--yel-color);
+}
+header .container .hero-info .hero-actions .start:hover {
+  background-color: #c9fe1cc6;
+}
+
+header .container .hero-info .hero-actions .watch:hover {
+  color: #000;
+  background-color: var(--yel-color) !important;
+}
+
+/* Image Style */
+
+header .container .hero-img img {
+  max-height: 400px;
+  width: 90%;
+  border: 5px solid transparent;
+  background:
+    linear-gradient(var(--main-background-color), var(--main-background-color))
+      padding-box,
+    linear-gradient(to right, var(--yel-color), #3cc07e) border-box;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+header .container .active-players {
+  border-color: #1e2939 !important;
+  top: 80%;
+  left: -25px;
+}
+
+/*****? End Header *****/
+
+/*****? Our Games *****/
+
+.our-games {
+  padding-block: 100px;
+}
+
+.column-game .game-content-wrapper:hover {
+  cursor: pointer;
+}
+
+.our-games .carousel .column-game .game-content-wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(201, 255, 25, 0.573), transparent);
+  z-index: 1;
+  transition: height 0.2s ease;
+  pointer-events: none;
+  border-radius: 1.5rem;
+}
+
+.our-games .carousel .column-game:hover .game-content-wrapper::before {
+  height: 50%;
+}
+
+.our-games .carousel .column-game .game-info-tabs {
+  top: 20px;
+  right: 10%;
+  opacity: 0;
+}
+
+.our-games .carousel .column-game:hover .game-info-tabs {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: 30px;
+}
+
+.our-games .carousel .column-game:hover .game-image {
+  border: 3px solid #cbfe1c;
+  border-radius: 1.5rem;
+}
+
+.our-games .carousel .column-game:hover .game-image img {
+  transform: scale(1.1);
+  background:
+    linear-gradient(var(--main-background-color), var(--main-background-color))
+      padding-box,
+    linear-gradient(to right, var(--yel-color), #3cc07e) border-box;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.column-game .game-title-overlay {
+  bottom: -90px;
+  opacity: 0;
+}
+
+.column-game:hover .game-title-overlay {
+  bottom: 0;
+  opacity: 1;
+  color: #000000;
+}
+
+.our-games .carousel .column-game .game-content-wrapper {
+  height: 280px;
+  width: 100%;
+}
+
+.game-info-tabs {
+  top: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+
+.game-info-tabs span {
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.column-game:hover .game-info-tabs {
+  opacity: 1 !important;
+  visibility: visible !important;
+  top: 25px;
+}
+
+/* Carousel Buttons Style */
+
+.our-games .carousel-control-prev,
+.our-games .carousel-control-next {
+  width: 75px;
+  height: 75px;
+}
+
+.our-games .carousel-control-prev:hover,
+.our-games .carousel-control-next:hover {
+  border: 2px solid var(--yel-color) !important;
+  color: var(--yel-color) !important;
+}
+
+.our-games .view-all:hover {
+  background-color: var(--yel-color) !important;
+  text-shadow:
+    0 0 10px var(--yel-color),
+    0 0 20px var(--yel-color);
+  color: #000;
+}
+
+/*****? End Our Games *****/
+
+/*****? Our Games *****/
+
+.what-we-do {
+  padding-block: 100px;
+}
+
+.what-we-do::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  background-image: linear-gradient(
+    90deg,
+    transparent,
+    rgb(203, 254, 28) 20%,
+    rgb(203, 254, 28) 80%,
+    transparent
+  );
+  box-shadow:
+    0 0 10px var(--yel-color),
+    0 0 20px #cbfe1c4d;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.what-we-do .container .flex-box .item .inner {
+  background-color: #1a1a1a;
+  border: 1px solid #1e2939;
+}
+
+.what-we-do .container .flex-box .item .inner .icon {
+  background-color: #1e2939;
+  padding-inline: 35px;
+}
+
+.what-we-do .container .flex-box .item:hover .inner .icon {
+  color: var(--main-background-color);
+  background-color: var(--yel-color);
+}
+
+.what-we-do .container .flex-box .item:hover {
+  border-color: var(--yel-color);
+}
+
+.what-we-do .container .flex-box .item .inner .arrow {
+  transform: rotate(45deg);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.what-we-do .container .flex-box .item .inner .arrow-top {
+  border-right: 15px solid var(--yel-color);
+  top: -40px;
+  left: -20px;
+}
+
+.what-we-do .container .flex-box .item .inner:hover .arrow-top {
+  top: 12px;
+  left: 15px;
+}
+
+.what-we-do .container .flex-box .item .inner .arrow-bottom {
+  border-left: 15px solid var(--yel-color);
+  bottom: -40px;
+  right: -20px;
+}
+
+.what-we-do .container .flex-box .item .inner:hover .arrow-bottom {
+  bottom: 12px;
+  right: 15px;
+}
+
+/*****? End Our Games *****/
+
+/*****? Sponsor *****/
+
+.sponsor-section {
+  padding-block: 100px;
+}
+
+.sponsor-slider-wrapper {
+  width: 95%;
+}
+
+.center-glow {
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 500px 100px rgba(203, 254, 28, 0.85);
+  backdrop-filter: blur(15px);
+}
+.sponsor-track {
+  width: max-content;
+}
+
+.forward {
+  animation: scroll-left var(--animation-speed) linear infinite;
+}
+
+.backward {
+  animation: scroll-left var(--animation-speed) linear infinite reverse;
+}
+
+.sponsor-card {
+  width: 100px;
+}
+
+.sponsor-card img {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - (20px / 2)));
+  }
+}
+
+/*****? End Sponsor *****/
+
+/*****? Our Team *****/
+
+.our-team {
+  padding-block: 100px;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.image-wrapper:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.smooth-image {
+  display: block;
+  min-height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: grayscale(100%);
+  background-color: rgba(0, 0, 0, 0.162);
+  transform: translateY(0%);
+  z-index: 1;
+}
+
+.image-wrapper:hover .overlay {
+  transform: translateY(-100%);
+}
+
+.card-info {
+  bottom: 20px;
+  left: 10px;
+  right: 0;
+  padding: 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.personal-info .achievement {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0;
+}
+
+.corp-info h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.3rem 0.8rem;
+  border-radius: 2rem;
+  margin-bottom: 20px;
+  transform: rotate(90deg);
+}
+
+.image-wrapper:hover .personal-info .role,
+.image-wrapper:hover .corp-info h3 {
+  color: var(--yel-color) !important;
+}
+
+.image-wrapper {
+  width: 100% !important;
+  margin-bottom: 0;
+}
+
+.card-info {
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.smooth-image {
+  height: 350px;
+  object-fit: cover;
+}
+
+/*****? End Our Team *****/
+
+/*****? CONTACT US *****/
+
+.contact-us {
+  padding-block: 100px;
+  background-color: #101625;
+}
+.join-community {
+  background-image: linear-gradient(to right, var(--yel-color), #4ade80);
+}
+
+.join-community i:hover {
+  background-color: #000000c7 !important;
+  cursor: pointer;
+}
+
+.contact-info .form,
+.contact-info .card-item {
+  background-color: #1e2939;
+}
+input,
+select,
+textarea {
+  background-color: #364153;
+}
+
+input::placeholder,
+textarea::placeholder {
+  padding-left: 10px;
+  color: rgba(183, 181, 181, 0.538);
+  font-weight: 600;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--yel-color) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+textarea {
+  min-height: 100px;
+  field-sizing: content;
+  resize: none;
+}
+
+form button {
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.4s;
+}
+
+form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, #0000, rgba(255, 255, 255, 0.627), #0000);
+  transition: left 0.7s;
+}
+
+form button:hover:before {
+  left: 125%;
+}
+
+form .send {
+  width: 100%;
+  background-color: var(--yel-color);
+  color: #000;
+}
+form .send:hover {
+  background-color: #c9fe1cc6;
+}
+
+/*****? End CONTACT US *****/
+
+/*****? Footer *****/
+
+.footer {
+  padding-block: 60px;
+  padding-inline: 50px;
+}
+
+.footer i {
+  transition: color 0.2s ease;
+}
+.footer i:hover {
+  color: var(--yel-color) !important;
+  cursor: pointer;
+}
+
+.footer a:hover {
+  color: var(--yel-color) !important;
+}
+
+/*****? End Footer *****/

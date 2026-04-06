@@ -1,0 +1,28 @@
+/*? ============================================================*/
+/*? very small devices (up to 576px) */
+/*? ============================================================ */
+@media screen and (max-width: 576px) {
+  nav ul li:last-child {
+    border-bottom: 2px solid #212529;
+  }
+
+  nav .left-side .fa-bell:hover::after {
+    color: #cbfe1c;
+  }
+
+  nav .left-side .fa-message:hover::after {
+    color: #cbfe1c;
+  }
+
+  section .carousel-item .game-info-tabs span {
+    font-size: 10px !important;
+    padding: 5px 10px !important;
+  }
+
+  .corp-info h3 {
+    display: none;
+  }
+  .personal-info h3 {
+    font-size: 0.9rem !important;
+  }
+}
